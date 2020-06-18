@@ -1,0 +1,117 @@
+/* Навигация */
+
+.nav {
+    display: flex;
+    /* align-items: center; */
+    margin-top: 24px;
+  
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  
+  .site-nav {
+    display: flex;
+    margin-left: 86px;
+    overflow: hidden;
+  }
+  
+  .site-nav .item:not(:first-child) {
+    margin-left: 50px;
+  }
+  
+  .contact-nav {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    /* align-items: center; */
+    /* padding-bottom: 30px; */
+  }
+  
+  .contact-nav .item:not(:first-child) {
+    margin-left: 30px;
+  }
+  
+  .site-nav .link {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: $--title-text-color;
+    text-decoration: none;
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  .curent--studia::before,
+  .curent--portfolio::before,
+  .curent--contact::before {
+    position: absolute;
+    color: $--accent-color;
+  
+    transform: translateY(+60px);
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .curent--studia::before {
+    content: 'Студия';
+  }
+  .curent--portfolio::before {
+    content: 'Портфолио';
+  }
+  .curent--contact::before {
+    content: 'Контакты';
+  }
+  .curent--studia:hover::before,
+  .curent--portfolio:hover::before,
+  .curent--contact:hover::before {
+    transform: translateY(0);
+  }
+  
+  .curent--line::after {
+    display: block;
+    content: '';
+    margin-top: 28px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3 ;
+  }
+  
+  .site-nav .link.current {
+    color: $--accent-color;
+  }
+  
+  .current:hover {
+    color: rgb(182, 179, 179);
+  }
+  
+  .contact-link {
+    display: inline-flex;
+  
+    color: $--primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact-link:hover,
+  .contact-link:focus {
+    color: $--accent-color;
+
+  }
+  
+  .contact-link--tel {
+    margin-right: 10px;
+    width: 14px;
+    height: 19px;
+    fill: currentColor;
+  }
+  
+  .contact-link--mail {
+    margin-right: 10px;
+    width: 18px;
+    height: 14px;
+    fill: currentColor;
+  }

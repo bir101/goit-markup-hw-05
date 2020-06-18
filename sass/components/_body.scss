@@ -1,0 +1,239 @@
+
+.section-work .image,
+.section .image {
+  display: block;
+}
+
+.button-feture {
+  text-decoration: none;
+}
+.section-list_thumb {
+  position: relative;
+}
+.text-title {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  left: 0;
+
+  padding: 27px 82px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.16;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-list__item {
+  margin-right: 10px;
+}
+
+
+/* section */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section .title {
+  margin-bottom: 10px;
+  color: $--title-text-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.section .text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* Фоновые изображения для перимуществ */
+.advantages-background {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon-p {
+  width: 70px;
+  height: 70px;
+}
+
+.list /*преимущества, постоянные клиенты*/ ,
+.section-list /*чем мы занимаемся*/,
+.work-list /*наша команда*/ {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list .item {
+  width: 270px;
+}
+.list .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.section-list .item {
+  display: flex;
+  align-items: center;
+  width: 370px;
+}
+
+.section-list .item:not(:first-child) {
+  margin-left: 30px;
+}
+.section-work /* наша команда */ {
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  background-color: #f5f4fa;
+}
+
+.section-work .container {
+  margin-bottom: 0;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: $--title-text-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.work-list .image {
+  margin-bottom: 30px;
+}
+.item:hover .card-image {
+  /* transform: rotateY(180deg); */
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.work-list .item {
+  padding-bottom: 24px;
+  background-color: $--primary-white-color;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  perspective: 600px;
+}
+.work-list .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.card-image {
+  position: relative;
+  width: 270px;
+  height: 260px;
+  margin-bottom: 30px;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card__face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.card__face--back {
+  padding-top: 50px;
+  /* padding-left: 40px;
+  padding-right: 43px; */
+  background: $--primary-white-color;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  transform: rotateY(180deg);
+}
+
+.section-work .title {
+  margin-bottom: 10px;
+
+  color: $--title-text-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section-work .text {
+  margin-top: 0;
+  margin-bottom: px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.feature-image {
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+.feature-image:hover {
+  background-color: $--accent-color;
+}
+
+/* фоновые изображения клиенты  */
+.client-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: all 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-background--icon {
+  width: 70%;
+  height: 70%;
+  fill: #afb1b8;
+}
+.client-background:hover .client-background--icon {
+  --color1: $--accent-color;
+}
+.client-background:hover {
+  border: 1px solid $--accent-color;
+}
+
+/* портфолио */
+.section-port {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+
+
+.filter > :not(:first-child) {
+  margin-left: 8px;
+}
