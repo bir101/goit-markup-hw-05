@@ -1,8 +1,8 @@
 /* Лого */
 .logo {
     /* padding-bottom: 22px; */
-    display: flex;
-    align-self: start;
+    display: inline-flex;
+    // align-self: start;
     color: $--title-text-color;
     
   
@@ -11,6 +11,9 @@
     font-size: 26px;
     letter-spacing: 0.03em;
     text-decoration: none;
+    @media screen and(max-width: 1199px){
+      font-size: 24px;
+    }
   }
   .logo > span {
     color: $--accent-color;
@@ -19,13 +22,16 @@
 
   .logo-footer {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: $--primary-white-color;
   
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.18;
+    @media screen and(max-width: 1199px){
+      font-size: 24px;
+    }
   }
   .logo-footer > span {
     color: $--accent-color;

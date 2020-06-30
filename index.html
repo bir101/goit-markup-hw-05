@@ -5,39 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- шапка сайта -->
     <header>
+    
+     <div class="menu-position">
       <nav class="nav container">
-        <a href="/" class="logo"> <span>Web</span> Studio </a>
 
-        <ul class="site-nav">
-          <li class="item"><a href="./index.html" class="link current curent--line curent--studia">Студия</a></li>
-          <li class="item"><a href="./portfolio.html" class="link curent--portfolio">Портфолио</a></li>
-          <li class="item"><a href="/" class="link curent--contact">Контакты</a></li>
-        </ul>
+       <div class="logo-button">
+         <a href="/" class="logo"> <span>Web</span> Studio </a>
 
-        <ul class="contact-nav">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="contact-link">
-              <svg class="contact-link--mail">
-                <use href="./images/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="contact-link"
-              ><svg class="contact-link--tel">
-                <use href="./images/symbol-defs.svg#icon-tel"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+         <button type="button" class="menu-button " data-menu-button>
+           <svg width="40" height="40px" aria-label="переключатель мобильного меню">
+           <use class="icon-cross" href="./images/menu-icon.svg#cross"></use>
+          <use class="icon-menu" href="./images/menu-icon.svg#menu"></use>
+
+         
+        </svg>
+        </button>
+         </div>
+
+       
+          <div class="menu-container " data-menu>
+
+            <ul class="site-nav">
+              <li class="item"><a href="./index.html" class="link current curent--line ">Студия</a></li>
+              <li class="item"><a href="./portfolio.html" class="link ">Портфолио</a></li>
+              <li class="item"><a href="/" class="link ">Контакты</a></li>
+            </ul>
+    
+            <ul class="contact-nav">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="contact-link">
+                  <svg class="contact-link--mail">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use>
+                    
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="contact-link"
+                  ><svg class="contact-link--tel">
+                    <use href="./images/symbol-defs.svg#icon-tel"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+       
+        
+     
       </nav>
+     </div>
+     
     </header>
     <main>
       <!-- фон + кнопка(ссылка) -->
@@ -50,7 +74,7 @@
       </section>
 
       <!-- Преимущества -->
-      <section class="section">
+      <section class="section ">
         <div class="container">
           <h2 class="hidden">Преимущества</h2>
           <ul class="list">
@@ -107,7 +131,7 @@
 
       <!-- Чем мы занимаемся -->
 
-      <section class="section">
+      <section class="section section-feture">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
 
@@ -131,7 +155,7 @@
             <li class="item">
               <a href="/" class="button-feture">
                 <div class="section-list_thumb">
-                  <img src="./images/desktop.jpg" alt="десктоп" width="370" height="294" class="image" />
+                  <img src="./images/desktop.jpg" alt="десктоп" width="100%" height="294" class="image" />
                   <h3 class="text-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
                 </div>
               </a>
@@ -149,8 +173,18 @@
           <ul class="work-list">
             <li class="item">
               <div class="card-image">
-                <img src="./images/johnsmithg.jpg" alt="John Smith" width="270" height="294" class="image card__face" />
-                <b class="card__face card__face--back">Product Designer</b>
+                <img 
+                srcset="./images/johnsmithg-270.jpg 270w,
+                        ./images/johnsmithg-354.jpg 354w,
+                        ./images/johnsmithg-450.jpg 450w,
+                        ./images/johnsmithg-540.jpg 540w,
+                        ./images/johnsmithg-708.jpg 708w,
+                        ./images/johnsmithg-900.jpg 900w"
+                src="./images/johnsmithg-450.jpg"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, (max-width: 450px) 450px, 100vw"
+                alt="John Smith" 
+                class="image card__face" />
+                <!-- <b class="card__face card__face--back">Product Designer</b> -->
               </div>
               <h3 class="title">John Smith</h3>
               <p class="text">Product Designer</p>
@@ -189,8 +223,19 @@
 
             <li class="item">
               <div class="card-image">
-                <img src="./images/martastewart.jpg" alt="Marta Stewart" width="270" class="image card__face" />
-                <b class="card__face card__face--back">Frontend Developer</b>
+                <img 
+                srcset="./images/martastewart-270.jpg 270w,
+                        ./images/martastewart-354.jpg 354w,
+                        ./images/martastewart-450.jpg 450w,
+                        ./images/martastewart-540.jpg 540w,
+                        ./images/martastewart-708.jpg 708w,
+                        ./images/martastewart-900.jpg 900w"
+                src="./images/martastewart-450.jpg"
+
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, (max-width: 450px) 450px, 100vw"
+
+                alt="John Smith" 
+                class="image card__face" />               
               </div>
               <h3 class="title">Marta Stewart</h3>
               <p class="text">Frontend Developer</p>
@@ -228,8 +273,20 @@
 
             <li class="item">
               <div class="card-image">
-                <img src="./images/robertjakis.jpg" alt="Robert Jakis" width="270" class="image card__face" />
-                <b class="card__face card__face--back">Marketing</b>
+                <img 
+                 srcset=" ./images/robertjakis-270.jpg 270w,
+                          ./images/robertjakis-354.jpg 354w,
+                          ./images/robertjakis-450.jpg 450w,
+                          ./images/robertjakis-540.jpg 540w,
+                          ./images/robertjakis-708.jpg 708w,
+                          ./images/robertjakis-900.jpg 900w"
+                 
+                src="./images/robertjakis.jpg" 
+                alt="Robert Jakis" 
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, (max-width: 450px) 450px, 100vw"
+
+                class="image card__face" />
+                <!-- <b class="card__face card__face--back">Marketing</b> -->
               </div>
               <h3 class="title">Robert Jakis</h3>
               <p class="text">Marketing</p>
@@ -267,8 +324,20 @@
 
             <li class="item">
               <div class="card-image">
-                <img src="./images/martindoe.jpg" alt="Martin Doe" width="270" class="image card__face" />
-                <b class="card__face card__face--back">UI Designer</b>
+                <img
+                  srcset="./images/martindoe-270.jpg 270w,
+                          ./images/martindoe-354.jpg 354w,
+                          ./images/martindoe-450.jpg 450w,
+                          ./images/martindoe-540.jpg 540w,
+                          ./images/martindoe-708.jpg 708w,
+                          ./images/martindoe-900.jpg 900w"
+                src="./images/martindoe-450.jpg" 
+                alt="Martin Doe" 
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 450px) 450px, (max-width: 450px) 450px, 100vw"
+
+               class="image card__face" />
+               
+                <!-- <b class="card__face card__face--back">UI Designer</b> -->
               </div>
 
               <h3 class="title">Martin Doe</h3>
@@ -312,37 +381,37 @@
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
-          <ul class="list">
-            <li class="item">
+          <ul class="client-list">
+            <li class="client-item">
               <a href="" class="client-background">
                 <svg class="client-background--icon">
                   <use href="./images/symbol-defs.svg#icon-client1"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="client-item">
               <a href="" class="client-background"
                 ><svg class="client-background--icon">
                   <use href="./images/symbol-defs.svg#icon-client2"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="client-item">
               <a href="" class="client-background"
                 ><svg class="client-background--icon"><use href="./images/symbol-defs.svg#icon-client3"></use></svg>
               </a>
             </li>
-            <li class="item">
+            <li class="client-item">
               <a href="" class="client-background"
                 ><svg class="client-background--icon"><use href="./images/symbol-defs.svg#icon-client4"></use></svg>
               </a>
             </li>
-            <li class="item">
+            <li class="client-item">
               <a href="" class="client-background"
                 ><svg class="client-background--icon"><use href="./images/symbol-defs.svg#icon-client5"></use></svg>
               </a>
             </li>
-            <li class="item">
+            <li class="client-item">
               <a href="" class="client-background"
                 ><svg class="client-background--icon"><use href="./images/symbol-defs.svg#icon-client6"></use></svg>
               </a>
@@ -400,7 +469,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="footer_subscribe">
           <b class="footer-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
           <form class="footer-form">
             <label class="footer-form_field">
@@ -461,9 +530,14 @@
           <button type="submit" class="button-primary button-primary--modal">Отправить</button>
         </form>
 
-        <button class="modal-form--close" data-close-modal></button>
+        <button class="modal-form--close" data-close-modal>
+          <svg class="modal-form--closeicon">
+            <use  href="./images/form-icon.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
+    <script src="./menu.js"></script>
     <script src="./modal-form.js"></script>
     <script src="./submit.js"></script>
   </body>
