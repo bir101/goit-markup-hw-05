@@ -1,19 +1,39 @@
-.section-port .list-container {
+ .list-container {
     display: flex;
    
     flex-wrap: wrap;
     margin: -15px;
   }
+
   .flex-element {
-    min-width: 370px;
+    width: 450px;
     margin: 15px;
   
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     overflow: hidden;
+
+    @media screen and (min-width: 768px){
+      width: 354px;
+     }
+     @media screen and (min-width: 1200px){
+      width: 370px;
+        }
   }
+  .portfolio_thumb {
+    position: relative;
+    overflow: hidden;
+    height: 294px;
+    
+
+  }
+
   .portfolio-image {
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
   
   .portfolio .cart-content {
@@ -23,25 +43,29 @@
     border-right: 1px solid #eeeeee;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
   }
   .portfolio .title {
+    
     margin-bottom: 4px;
-  
+      
     color: $--title-text-color;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.2;
     letter-spacing: 0.06em;
+    
+   
   }
   .portfolio .portfolio-title {
     margin: 0;
     color: $--primary-text-color;
   }
   
-  .portfolio_thumb {
-    position: relative;
-    overflow: hidden;
-  }
+
   
   
   .portfolio_text {
@@ -72,11 +96,3 @@
   /* .flex-element a{
     display: inline-block;
   } */
-  
-  .section-port .filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
