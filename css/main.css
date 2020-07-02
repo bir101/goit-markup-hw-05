@@ -634,7 +634,6 @@ textarea {
   font-size: 14px;
   letter-spacing: 0.02em;
   text-decoration: none;
-  border-bottom: 1px solid #ECECEC;
 }
 
 @media screen and (min-width: 768px) {
@@ -781,12 +780,19 @@ textarea {
 }
 
 .site-nav .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   color: #212121;
   text-decoration: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .curent--line::after {
@@ -1051,7 +1057,7 @@ textarea {
 
 @media screen and (min-width: 450px) {
   .list .item {
-    width: 450px;
+    width: 100%;
   }
 }
 
@@ -1095,7 +1101,7 @@ textarea {
 
 @media screen and (min-width: 480px) {
   .advantages-background {
-    width: 450px;
+    max-width: 450px;
     height: 120px;
   }
 }
